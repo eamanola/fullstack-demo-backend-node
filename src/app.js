@@ -9,6 +9,7 @@ const {
   errors,
 } = require('./lib');
 const { NODE_ENV } = require('./config');
+const notesRouter = require('./notes/router');
 
 const app = express();
 
@@ -25,6 +26,8 @@ app.get('/health', (req, res) => { res.status(200).send('OK'); });
 
 app.use(usersRouter);
 app.use('/email-verification', emailVerificationRouter);
+
+app.use(notesRouter);
 
 app.use(errorHandler(errors, { defaultTo500: true }));
 
