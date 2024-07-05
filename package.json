@@ -1,0 +1,30 @@
+{
+  "name": "fullstack-demo-backend-node",
+  "version": "0.0.1",
+  "description": "a coding demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "SECRET=seupersecret jest",
+    "lint": "eslint .",
+    "dev": "nodemon src/index.js",
+    "prepare": "husky || node -e 'process.env.HUSKY === \"0\"'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "empty-backend": "file:../empty-backend",
+    "express": "^4.19.2",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "husky": "^9.0.11",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4"
+  }
+}
