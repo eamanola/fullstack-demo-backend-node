@@ -49,7 +49,7 @@ describe('GET /public-notes', () => {
     await deleteAll('Users');
   });
 
-  it.skip('should return public notes', async () => {
+  it('should return public notes', async () => {
     const token = await getToken(api);
     const PRIVATE_LIMIT = 4;
 
@@ -77,7 +77,7 @@ describe('GET /public-notes', () => {
     expect(response.body.notes.every(({ isPublic }) => isPublic === true)).toBe(true);
   });
 
-  describe.skip('limit option', () => {
+  describe('limit option', () => {
     it('should should limit results, if limit is less than all count', async () => {
       const token = await getToken(api);
       const PUBLIC_LIMIT = 4;
@@ -130,7 +130,7 @@ describe('GET /public-notes', () => {
     });
   });
 
-  describe.skip('offset option', () => {
+  describe('offset option', () => {
     it('should skip spesified offset', async () => {
       const token = await getToken(api);
       const PUBLIC_LIMIT = 4;

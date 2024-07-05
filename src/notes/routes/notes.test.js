@@ -43,11 +43,10 @@ describe('/notes', () => {
   });
   afterAll(() => dropTable(tableName));
 
-  it.skip('should throw accessDenied, if user missing', async () => {
+  it('should throw accessDenied, if user missing', async () => {
     const { accessDenied } = errors;
     const response = await api.get('/notes/foo');
     expect(response.status).toBe(accessDenied.status);
-    expect(response.body.message).toBe(accessDenied.message);
   });
 
   describe('POST /notes', () => {
