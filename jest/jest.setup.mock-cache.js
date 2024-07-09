@@ -1,6 +1,4 @@
-jest.mock('empty-backend', () => {
-  const emptybackend = jest.requireActual('empty-backend');
-
+jest.mock('automata-cache', () => {
   const mockCache = {};
 
   const setItem = async (key, value) => {
@@ -17,17 +15,12 @@ jest.mock('empty-backend', () => {
     }
   };
 
-  const cache = {
+  return {
     closeCache: () => null,
     connectCache: () => null,
     getItem,
     initCache: () => null,
     removeItem,
     setItem,
-  };
-
-  return {
-    ...emptybackend,
-    cache,
   };
 });

@@ -1,4 +1,4 @@
-const { rest } = require('../../../../empty-backend/dist/index.bundle');
+const rest = require('automata-rest');
 
 const validator = require('../validators/note');
 

@@ -1,4 +1,4 @@
-const { db } = require('empty-backend');
+const db = require('automata-db');
 
 const { validNote } = require('../jest/note-helpers');
 

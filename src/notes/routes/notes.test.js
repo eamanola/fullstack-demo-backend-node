@@ -1,6 +1,7 @@
 const supertest = require('supertest');
 
-const { db, errors } = require('empty-backend');
+const db = require('automata-db');
+const { errors } = require('automata-utils');
 
 const { validNote, getToken } = require('../jest/note-helpers');
 

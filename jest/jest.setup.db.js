@@ -1,4 +1,4 @@
-const { db } = require('empty-backend');
+const db = require('automata-db');
 
 const { initDB, connectDB, closeDB } = db;
 
@@ -8,8 +8,7 @@ const skip = () => SKIP_PATHS.some((skipPath) => testPath.includes(skipPath));
 
 beforeAll(async () => {
   if (skip()) { return; }
-
-  await initDB(':memory:');
+  await initDB();
   await connectDB();
 });
 

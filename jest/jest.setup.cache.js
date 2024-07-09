@@ -1,4 +1,4 @@
-const { cache } = require('empty-backend');
+const cache = require('automata-cache');
 
 const { initCache, connectCache, closeCache } = cache;
 

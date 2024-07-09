@@ -1,4 +1,4 @@
-const { app } = require('empty-backend');
+const app = require('empty-backend');
 
 const notesRouter = require('./notes/router');
 

@@ -13,8 +13,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "automata-cache": "github:eamanola/automata-cache",
+    "automata-db": "github:eamanola/automata-db",
+    "automata-rest": "github:eamanola/automata-rest",
+    "automata-utils": "github:eamanola/automata-utils",
     "dotenv": "^16.4.5",
-    "empty-backend": "file:../empty-backend",
+    "empty-backend": "github:eamanola/empty-backend",
     "express": "^4.19.2",
     "yup": "^1.4.0"
   },
